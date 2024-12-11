@@ -5,3 +5,38 @@ Creating an Express Server
 4. Install Express package
 5. Write Server application in index.js
 6. Start server
+
+//code to create server for express
+import express from "express";
+const app = express();
+const port = 3000;
+
+
+app.listen(port, () => {
+    console.log(`Server running on port ${port}.`);
+})
+
+app.get("/", (req, res) =>{
+    res.sendFile(__dirname + "/public/index.html")
+})
+//Certainly! In Node.js, __dirname is a special keyword that refers to the directory name of the current module file. It’s like saying “where am I right now in my project’s folder structure?”
+//For example, if you have a file located at C:\Users\YourName\Projects\MyApp\index.js, and you use __dirname inside that file, it will give you C:\Users\YourName\Projects\MyApp. This can be super handy when you need to work with file paths relative to where your script is running.
+
+<form action="/login" method="post"> 
+    <label for="email"></label>
+    <input type="text" name="email" required>
+    <label for="password">Password</label>
+    <input type="text" name="password" required>
+    <input type="submit" value="Submit">
+</form>
+
+//action: refers to route that you want your server to handle
+//method: post, get, patch..
+//label: to know by client what to type there
+// input //
+//type: radio, dropdown, checkbox, input, text
+//name: label the data or a key pair
+//required: need to add before going input
+
+USE middleware
+first install body parser
